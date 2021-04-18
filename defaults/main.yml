@@ -1,2 +1,19 @@
 ---
 # file: defaults/main.yaml
+
+lychee_db_image: "mariadb:10"
+lychee_db_expose:
+  - 3306
+lychee_db_volumes:
+  - "mysql:/var/lib/mysql"
+lychee_db_environment:
+  - "MYSQL_ROOT_PASSWORD=lychee"
+  - "MYSQL_DATABASE=lychee"
+  - "MYSQL_USER=lychee"
+  - "MYSQL_PASSWORD=lychee"
+
+lychee_image: "lycheeorg/lychee"
+luchee_volumes:
+  - "./lychee/conf:/conf"
+  - "./lychee/uploads:/uploads"
+  - "./lychee/sym:/sym"

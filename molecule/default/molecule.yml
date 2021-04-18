@@ -3,6 +3,9 @@
 
 dependency:
   name: galaxy
+  options:
+    # Put roles right to this one. Reduce possible role locations.
+    roles-path: ../pmikus.lychee/molecule/default/roles
 driver:
   name: docker
 lint: |

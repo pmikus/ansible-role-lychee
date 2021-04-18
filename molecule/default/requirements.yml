@@ -1,0 +1,6 @@
+---
+# file: molecule/default/requirements.yaml
+
+roles:
+  - name: geerlingguy.docker
+    source: https://galaxy.ansible.com
